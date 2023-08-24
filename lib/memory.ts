@@ -1,5 +1,6 @@
 import { Redis } from "@upstash/redis";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
+import { HuggingFaceInferenceEmbeddings } from "langchain/embeddings/hf";
 import { PineconeClient } from "@pinecone-database/pinecone";
 import { PineconeStore } from "langchain/vectorstores/pinecone";
 
@@ -39,7 +40,8 @@ export class MemoryManager {
     );
 
     const vectorStore = await PineconeStore.fromExistingIndex(
-      new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY }),
+      //new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY }),
+      new HuggingFaceInferenceEmbeddings({ apiKey: process.env.HUGGINGFACE_API_TOKEN }),
       { pineconeIndex }
     ); 
 
