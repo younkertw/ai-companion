@@ -85,7 +85,7 @@ export async function POST(
     // Call Replicate for inference
     const model = new Replicate({
       model:
-        "a16z-infra/llama-2-13b-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5",
+        "a16z-infra/llama-2-13b-chat:2a7f981751ec7fdf87b5b91ad4db53683a98082e9ff7bfd12c8cd5ea85980a52",
       input: {
         max_length: 2048,
       },
