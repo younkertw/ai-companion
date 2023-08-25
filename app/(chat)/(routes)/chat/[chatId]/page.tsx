@@ -6,6 +6,7 @@ import prismadb from "@/lib/prismadb";
 
 import { ChatClient } from "./components/client";
 import ObservationNew from '@/components/observation/observation-new';
+import type { ObservationType } from '@/lib/ObservationType'
 
 interface ChatIdPageProps {
   params: {
@@ -38,6 +39,15 @@ const ChatIdPage = async ({
         where: {
           userId,
         },
+      },
+      observations: {
+        orderBy: {
+          createdAt: "asc",
+        },
+        where: {
+          userId,
+        },
+        take: 2,
       },
       _count: {
         select: {
