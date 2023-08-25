@@ -1,25 +1,26 @@
 /* scrollbar.css */
 
-.scrollbar-styles::-webkit-scrollbar {
+/* Define the custom scrollbar styles within this file */
+.scrollbar-container::-webkit-scrollbar {
   background-color: transparent;
   width: 4px;
 }
 
-.scrollbar-styles::-webkit-scrollbar-track {
+.scrollbar-container::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 20px;
   width: 2px;
 }
 
-.scrollbar-styles::-webkit-scrollbar-thumb {
+.scrollbar-container::-webkit-scrollbar-thumb {
   background-color: #c0c0c0;
   border-radius: 20px;
   width: 2px;
 }
 
-.scrollbar-styles::-webkit-scrollbar-thumb:hover {
+.scrollbar-container::-webkit-scrollbar-thumb:hover {
   background-color: #c0c0c0;
   width: 2px;
 }
 
-.scrollbar-styles::-webkit-overflow-scrolling: touch;
+.scrollbar-container::-webkit-overflow-scrolling: touch;
