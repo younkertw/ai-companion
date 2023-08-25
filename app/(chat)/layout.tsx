@@ -1,4 +1,4 @@
-import '@/lib/scrollbar.css'
+import '@/app/scrollbar.css'
 const ChatLayout = ({
   children
 }: {
