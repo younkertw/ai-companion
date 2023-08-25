@@ -1,10 +1,11 @@
 import { redirect } from "next/navigation";
 import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
-//import supabase from '@/lib/supabaseClient';
+import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
 
 import { ChatClient } from "./components/client";
+import ObservationNew from '@/app/components/observation/observation-new';
 
 interface ChatIdPageProps {
   params: {
@@ -38,29 +39,12 @@ const ChatIdPage = async ({
           userId,
         },
       },
-      observations: {
-        orderBy: {
-          createdAt: "asc",
-        },
-        where: {
-          userId,
-        },
-        take: 2,
-      },
       _count: {
         select: {
           messages: true,
         }
       }
     }
-  } as {
-    messages: Message[];
-    observations: Observation[];
-    _count: {
-      select: {
-        messages: boolean;
-      };
-    };
   });
 
 
