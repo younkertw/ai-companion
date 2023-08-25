@@ -16,9 +16,9 @@
   width: 2px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb: hover {
   background-color: #c0c0c0;
   width: 2px;
 }
 
-::-webkit-overflow-scrolling:touch;
+::-webkit-overflow-scrolling: touch;
