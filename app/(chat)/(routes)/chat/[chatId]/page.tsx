@@ -40,6 +40,15 @@ const ChatIdPage = async ({
           userId,
         },
       },
+      observations: {
+        orderBy: {
+          createdAt: "asc",
+        },
+        where: {
+          userId,
+        },
+        take: 2,
+      },
       _count: {
         select: {
           messages: true,
@@ -57,7 +66,7 @@ const ChatIdPage = async ({
   <div className="flex max-w-screen min-h-screen max-h-screen antialiased">
     <div className="hidden lg:block md:flex w-[45%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
       <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
-           <ObservationNew observationMessages={companion.messages} /> 
+           <ObservationNew observationMessages={companion.observations} /> 
       </div>
       <div>
       </div>
