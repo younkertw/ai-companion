@@ -11,15 +11,15 @@ interface ChatIdPageProps {
     chatId: string;
   }
 }
-const { getToken } = useAuth();
 
 const ChatIdPage = async ({
   params
 }: ChatIdPageProps) => {
   const { userId } = auth();
-  const supabaseAccessToken = await getToken({ template: 'ai-companion' });
+  //const { getToken } = useAuth();
+  //const supabaseAccessToken = await getToken({ template: 'ai-companion' });
 
-  supabase.auth.setAuth(supabaseAccessToken)
+  //supabase.auth.setAuth(supabaseAccessToken)
 
   if (!userId) {
     return redirectToSignIn();
