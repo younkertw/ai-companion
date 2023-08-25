@@ -9,6 +9,8 @@ import { ChatForm } from "@/components/chat-form";
 import { ChatHeader } from "@/components/chat-header";
 import { ChatMessages } from "@/components/chat-messages";
 import { ChatMessageProps } from "@/components/chat-message";
+import Character from './character'
+
 
 interface ChatClientProps {
   companion: Companion & {
@@ -71,6 +73,7 @@ export const ChatClient = ({
         handleInputChange={handleInputChange} 
         onSubmit={onSubmit} 
       />
+      {isLoading && <Character character={character} />}
     </div>
    );
 }
