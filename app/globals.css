@@ -1,8 +1,4 @@
 @import './scrollbar.css';
-.scrollbar-container {
-  @apply scrollbar-styles;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +9,10 @@ body,
 :root {
   height: 100%;
 }
- 
+
+.scrollbar-container {
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
