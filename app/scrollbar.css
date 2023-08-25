@@ -23,4 +23,7 @@
   width: 2px;
 }
 
-.scrollbar-container::-webkit-overflow-scrolling: touch;
+/* Apply the webkit-overflow-scrolling property within the container */
+.scrollbar-container {
+  -webkit-overflow-scrolling:touch;
+}
