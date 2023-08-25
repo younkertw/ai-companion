@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ProModal } from '@/components/pro-modal';
 
 import './globals.css'
-import './scrollbar.css'
+//import './scrollbar.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
