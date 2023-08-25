@@ -25,5 +25,8 @@
 
 /* Apply the webkit-overflow-scrolling property within the container */
 .scrollbar-container {
-  -webkit-overflow-scrolling:touch;
+  -webkit-overflow-scrolling: touch;
+  /* Set a height or max-height to enable scrolling */
+  max-height: 100vh; /* Adjust as needed */
+  overflow-y: auto;
 }
