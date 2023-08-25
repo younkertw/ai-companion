@@ -10,6 +10,7 @@ import { ChatHeader } from "@/components/chat-header";
 import { ChatMessages } from "@/components/chat-messages";
 import { ChatMessageProps } from "@/components/chat-message";
 import Character from './character'
+import { Characters } from './config'
 import { CharacterType } from '@/lib/CharacterType'
 
 
