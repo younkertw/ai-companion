@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
-import supabase from '@/lib/supabaseClient';
+//import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
 
 import { ChatClient } from "./components/client";
