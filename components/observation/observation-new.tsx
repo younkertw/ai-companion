@@ -12,7 +12,7 @@ interface Props {
 const ObservationNew = ({ observationMessages }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isObservation, setIsObservation] = useState('')
-  const [observations, setObservations] = useState<ObservationType[]>(observationMessages);
+  const [observations, setObservations] = useState<ObservationType[] >(observationMessages);
 
   //console.log("OBSERVATIONS:", observationMessages)
 
@@ -64,7 +64,7 @@ const ObservationNew = ({ observationMessages }: Props) => {
         {isLoading ? 
           <HashLoader color={'#36d7b7'} />
          : 
-          <ObservationList OBSERVATIONS={observations ?? []} }
+          <ObservationList OBSERVATIONS={observations ?? [] }
             onObservationClicked={(observation) =>
               onObservationClicked(observation, () => handleObservation(observation))
             }
