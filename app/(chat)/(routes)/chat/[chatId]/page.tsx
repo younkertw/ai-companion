@@ -59,11 +59,10 @@ const ChatIdPage = async ({
         },
         where: {
           userId,
-        },
-      },
-      take: 2,
-      },
-    }
+        }
+      }
+    },
+    take: 2
   });
 
   if (!companion) {
