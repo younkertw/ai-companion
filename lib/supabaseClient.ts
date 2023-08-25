@@ -13,3 +13,4 @@ export const supabase = createClient(supabase_url!, supabase_anon_key!
 //  },
 //})
 )
+export default supabase
