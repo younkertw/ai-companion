@@ -38,7 +38,7 @@ const ChatIdPage = async ({
           userId,
         },
       },
-      Observations: {
+      observations: {
         orderBy: {
           createdAt: "asc",
         },
@@ -53,6 +53,14 @@ const ChatIdPage = async ({
         }
       }
     }
+  } as {
+    messages: Message[];
+    observations: Observation[];
+    _count: {
+      select: {
+        messages: boolean;
+      };
+    };
   });
 
 
