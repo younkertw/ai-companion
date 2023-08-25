@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="zh-tw" suppressHydrationWarning>
         <body className={cn("bg-secondary", inter.className)}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <ProModal />

@@ -8,7 +8,7 @@ export const BotAvatar = ({
   src
 }: BotAvatarProps) => {
   return (
-    <Avatar className="h-12 w-12">
+    <Avatar className="h-8 w-8">
       <AvatarImage src={src} />
     </Avatar>
   );
