@@ -8,7 +8,7 @@ export const UserAvatar = () => {
   const { user } = useUser();
 
   return (
-    <Avatar className="h-8 w-8">
+    <Avatar className="h-9 w-9">
       <AvatarImage src={user?.imageUrl} />
     </Avatar>
   );
