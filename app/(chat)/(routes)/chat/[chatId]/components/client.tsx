@@ -26,7 +26,8 @@ export const ChatClient = ({
 }: ChatClientProps) => {
   const router = useRouter();
   const [messages, setMessages] = useState<ChatMessageProps[]>(companion.messages);
-  
+  const [character, setCharacter] = useState<CharacterType>(Characters[0]);
+
   const {
     input,
     isLoading,
