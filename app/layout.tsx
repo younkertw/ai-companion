@@ -27,9 +27,7 @@ export default function RootLayout({
         <body className={cn("bg-secondary", inter.className)}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <ProModal />
-            <div className="scrollbar-container">
               {children}
-            </div>
             <Toaster />
           </ThemeProvider>
         </body>
