@@ -5,7 +5,7 @@ import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 import prismadb from "@/lib/prismadb";
 
 import { ChatClient } from "./components/client";
-import ObservationNew from '@/components/observation/observation-new';
+//import ObservationNew from '@/components/observation/observation-new';
 
 interface ChatIdPageProps {
   params: {
