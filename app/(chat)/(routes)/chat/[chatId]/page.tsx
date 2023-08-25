@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
-import { auth, redirectToSignIn } from "@clerk/nextjs";
+import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
+import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
 
 import { ChatClient } from "./components/client";
@@ -15,6 +16,10 @@ const ChatIdPage = async ({
   params
 }: ChatIdPageProps) => {
   const { userId } = auth();
+  const { getToken } = useAuth();
+  const supabaseAccessToken = await getToken({ template: 'ai-companion' });
+
+  supabase.auth.setAuth(supabaseAccessToken)
 
   if (!userId) {
     return redirectToSignIn();
@@ -32,6 +37,15 @@ const ChatIdPage = async ({
         where: {
           userId,
         },
+      },
+      observations: {
+        orderBy: {
+          createdAt: "asc",
+        },
+        where: {
+          userId,
+        },
+        take: 2,
       },
       _count: {
         select: {
