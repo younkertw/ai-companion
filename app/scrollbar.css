@@ -1,32 +1,32 @@
 /* scrollbar.css */
 
 /* Define the custom scrollbar styles within this file */
-.scrollbar-container::-webkit-scrollbar {
+.theme-scrollbar::-webkit-scrollbar {
   background-color: transparent;
   width: 4px;
 }
 
-.scrollbar-container::-webkit-scrollbar-track {
+.theme-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 20px;
   width: 2px;
 }
 
-.scrollbar-container::-webkit-scrollbar-thumb {
+.theme-scrollbar::-webkit-scrollbar-thumb {
   background-color: #c0c0c0;
   border-radius: 20px;
   width: 2px;
 }
 
-.scrollbar-container::-webkit-scrollbar-thumb:hover {
+.theme-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #c0c0c0;
   width: 2px;
 }
 
 /* Apply the webkit-overflow-scrolling property within the container */
-.scrollbar-container {
+.theme-scrollbar {
   -webkit-overflow-scrolling: touch;
   /* Set a height or max-height to enable scrolling */
-  max-height: 100vh;
+  max-height: 100vh; /* Adjust as needed */
   overflow-y: auto;
 }
