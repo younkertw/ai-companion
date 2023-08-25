@@ -38,7 +38,7 @@ const ChatIdPage = async ({
           userId,
         },
       },
-      observations: {
+      Observations: {
         orderBy: {
           createdAt: "asc",
         },
