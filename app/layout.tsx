@@ -24,14 +24,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn("bg-secondary", inter.className)}>
-          <div className={cn("theme-scrollbar")}>
-            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-              <ProModal />
-                {children}
-              <Toaster />
-            </ThemeProvider>
-          </div>
+        <body className={cn("bg-secondary", "theme-scrollbar", inter.className)}>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <ProModal />
+              {children}
+            <Toaster />
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
