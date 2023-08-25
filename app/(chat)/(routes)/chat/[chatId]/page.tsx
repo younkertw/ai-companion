@@ -53,7 +53,24 @@ const ChatIdPage = async ({
   }
 
   return (
-    <ChatClient companion={companion} />
+    <div className="flex max-w-screen min-h-screen max-h-screen antialiased">
+    <div className="hidden lg:block md:flex w-[45%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
+      <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
+           <ObservationNew observationMessages={observationMessages} /> 
+      </div>
+      <div>
+      </div>
+    </div>
+    <div className="w-full min-h-screen max-h-screen division">
+      <div className="flex flex-col justify-center px-1 py-1 overflow-y-auto">
+           <ChatClient companion={companion} />
+      </div>
+    </div>
+    <div className="hidden lg:block w-[45%] flex-grow pt-[2.75rem] px-1 overflow-y-auto division">
+      <div className="flex flex-col justify-center">
+      </div>
+    </div>
+  </div>
   );
 }
  
