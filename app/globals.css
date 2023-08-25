@@ -1,7 +1,12 @@
+@import './scrollbar.css';
+.scrollbar-container {
+  @apply scrollbar-styles;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import './scrollbar.css';
+
 
 html,
 body,
@@ -78,7 +83,6 @@ body,
 @layer base {
   * {
     @apply border-border;
-    @apply scrollbar-styles;
   }
   body {
     @apply bg-background text-foreground;
