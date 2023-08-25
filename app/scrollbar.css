@@ -1,25 +1,25 @@
-/* Works on Chrome, Edge, and Safari */
-::-webkit-scrollbar {
+/* scrollbar.css */
+
+.scrollbar-styles::-webkit-scrollbar {
   background-color: transparent;
   width: 4px;
 }
 
-::-webkit-scrollbar-track {
+.scrollbar-styles::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 20px;
   width: 2px;
 }
 
-::-webkit-scrollbar-thumb {
+.scrollbar-styles::-webkit-scrollbar-thumb {
   background-color: #c0c0c0;
   border-radius: 20px;
   width: 2px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.scrollbar-styles::-webkit-scrollbar-thumb:hover {
   background-color: #c0c0c0;
   width: 2px;
 }
 
-::-webkit-overflow-scrolling: touch;
-
+.scrollbar-styles::-webkit-overflow-scrolling: touch;
