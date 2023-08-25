@@ -1,29 +1,4 @@
-/* Scrollbar Styles */
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  border-radius: 20px;
-  width: 2px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0;
-  border-radius: 20px;
-  width: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #c0c0c0;
-  width: 2px;
-}
-
-::-webkit-overflow-scrolling: touch;
-
-/* Tailwind CSS Base Styles */
+@import './scrollbar.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,6 +78,7 @@ body,
 @layer base {
   * {
     @apply border-border;
+    @apply scrollbar-styles;
   }
   body {
     @apply bg-background text-foreground;
