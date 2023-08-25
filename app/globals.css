@@ -10,6 +10,8 @@ body,
   height: 100%;
 }
 
+.theme-scrollbar {
+}
 
 @layer base {
   :root {
