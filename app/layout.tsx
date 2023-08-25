@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ProModal } from '@/components/pro-modal';
 
 import './globals.css'
+import './scrollbar.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,12 +25,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn("bg-secondary", inter.className)}>
+        <body className={cn("bg-secondary theme-scrollbar", inter.className)}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <ProModal />
-            <div className="theme-scrollbar">
-              {children}
-            </div>
+            {children}
             <Toaster />
           </ThemeProvider>
         </body>
