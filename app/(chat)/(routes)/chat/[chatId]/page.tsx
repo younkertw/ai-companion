@@ -3,10 +3,8 @@ import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
 //import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
-import { Companion, Observations } from '@prisma/client';
 
 import { ChatClient } from "./components/client";
-import ObservationNew from '@/components/observation/observation-new';
 
 
 interface ChatIdPageProps {
@@ -59,31 +57,13 @@ const ChatIdPage = async ({
     }
   });
 
-  const observations: Observations[] = companion ? companion.observations : [];
   if (!companion) {
     return redirect("/");
   }  
 
 
   return (
-  <div className="flex max-w-screen min-h-screen max-h-screen">
-    <div className="hidden lg:block md:flex w-[45%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
-      <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
-         <ObservationNew observations={observations} /> 
-      </div>
-      <div>
-      </div>
-    </div>
-    <div className="w-full min-h-screen max-h-screen">
-      <div className="flex flex-col justify-center px-1 py-1">
-         <ChatClient companion={companion} />
-      </div>
-    </div>
-    <div className="hidden lg:block w-[45%] flex-grow pt-[2.75rem] px-1 overflow-y-auto division">
-      <div className="flex flex-col justify-center">
-      </div>
-    </div>
-  </div>
+     <ChatClient companion={companion} />
   );
 }
  
