@@ -3,7 +3,7 @@ import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
 //import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
-import { Companion, Observations } from '@/lib/prismadb';
+import { Companion, Observations } from '@prisma/client';
 
 import { ChatClient } from "./components/client";
 import ObservationNew from '@/components/observation/observation-new';
