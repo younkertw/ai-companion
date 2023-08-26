@@ -14,7 +14,7 @@ interface ChatIdPageProps {
   }
 }
 
-interface Props {
+interface observationMessagesProps {
   observations: ObservationType[];
 }
 

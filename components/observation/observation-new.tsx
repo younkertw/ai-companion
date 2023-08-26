@@ -5,16 +5,16 @@ import { ObservationList } from './ObservationList'
 import { HashLoader } from 'react-spinners'
 import type { ObservationType } from '@/lib/ObservationType'
 
-interface Props {
+interface observationMessagesProps {
   observations: ObservationType[];
 }
 
-const ObservationNew = ({ observations }: Props) => {
+const ObservationNew = ({ observations }: observationMessagesProps) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isObservation, setIsObservation] = useState('')
-  const [observations, setObservations] = useState<ObservationType[] >(observationMessages);
+  const [currentObservation, setCurrentObservation] = useState<ObservationType[] >(observations);
 
-  //console.log("OBSERVATIONS:", observationMessages)
+  //console.log("OBSERVATIONS:", observations)
 
 
   // Submit message
@@ -64,7 +64,7 @@ const ObservationNew = ({ observations }: Props) => {
         {isLoading ? 
           <HashLoader color={'#36d7b7'} />
          : 
-          <ObservationList OBSERVATIONS={observations ?? [] }
+          <ObservationList OBSERVATIONS={currentObservation ?? [] }
             onObservationClicked={(observation) =>
               onObservationClicked(observation, () => handleObservation(observation))
             }
