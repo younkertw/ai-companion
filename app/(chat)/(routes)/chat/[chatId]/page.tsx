@@ -3,6 +3,7 @@ import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
 //import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
+import { Companion, Observations } from '@/lib/prismadb';
 
 import { ChatClient } from "./components/client";
 import ObservationNew from '@/components/observation/observation-new';
@@ -44,6 +45,15 @@ const ChatIdPage = async ({
           userId,
         },
       },
+      observations: {
+        orderBy: {
+          createdAt: "asc"
+        },
+        where: {
+          userId,
+        },
+        take: 2,
+      },
       _count: {
         select: {
           messages: true,
@@ -52,18 +62,14 @@ const ChatIdPage = async ({
     }
   });
 
-  const observations = await prismadb.observations.findUnique({
-    where: {
-      id: params.chatId,
-      userId
-    },
-    orderBy: {
-      createdAt: "asc"
-    },
-    take: 2
-  });
 
-  if (!companion) {
+  //if (!companion) {
+  //  return redirect("/");
+  //}
+
+  if (companion) {
+    const observations: Observations[] = companion.observations;
+  } else {
     return redirect("/");
   }
 
