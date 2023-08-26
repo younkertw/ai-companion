@@ -67,15 +67,6 @@ export const ChatClient = ({
   }
 
   return (
-  <div className="flex max-w-screen min-h-screen max-h-screen">
-    <div className="hidden lg:block md:flex w-[45%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
-      <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
-         <ObservationNew observations={observations} /> 
-      </div>
-      <div>
-      </div>
-    </div>
- 
     <div className="flex flex-col h-full p-4 space-y-2">
       <ChatHeader companion={companion} />
       <ChatMessages 
@@ -89,13 +80,9 @@ export const ChatClient = ({
         handleInputChange={handleInputChange} 
         onSubmit={onSubmit} 
       />
+      <ObservationNew observations={observations} />
       {isLoading && <Character character={character} />}
     </div>
-
-    <div className="hidden lg:block w-[45%] flex-grow pt-[2.75rem] px-1 overflow-y-auto division">
-      <div className="flex flex-col justify-center">
-      </div>
-    </div>
-  </div>   
+   
    );
 }
