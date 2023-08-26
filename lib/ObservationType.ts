@@ -1,7 +1,7 @@
 export interface ObservationType {
     id: string
-    createdAt: string
-    updatedAt: string
+    createdAt: Date
+    updatedAt: Date
     title: string | null
     message: string | null
     roomId: string | null

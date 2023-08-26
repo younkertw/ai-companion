@@ -33,6 +33,9 @@ const ObservationNew = ({ observations }: observationMessagesProps) => {
     setIsLoading(false)
   }
 
+  useEffect(() => {
+    setCurrentObservation(observations);
+  }, [observations])
 
   useEffect(() => {
     if (isObservation !== '') {
