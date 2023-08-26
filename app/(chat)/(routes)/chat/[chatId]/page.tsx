@@ -61,22 +61,6 @@ const ChatIdPage = async ({
     }
   });
 
-  const observations = await prismadb.companion.findUnique({
-    where: {
-      id: params.chatId
-    },
-    include: {
-      observations: {
-        orderBy: {
-          createdAt: "asc"
-        },
-        where: {
-          userId,
-        }
-      }
-    },
-    take: 2
-  });
 
   if (!companion) {
     return redirect("/");
