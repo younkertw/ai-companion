@@ -7,7 +7,7 @@ import { Companion, Observations } from '@prisma/client';
 
 import { ChatClient } from "./components/client";
 import ObservationNew from '@/components/observation/observation-new';
-import type { ObservationType } from '@/lib/ObservationType'
+
 
 interface ChatIdPageProps {
   params: {
@@ -15,9 +15,6 @@ interface ChatIdPageProps {
   }
 }
 
-interface observationMessagesProps {
-  observations: ObservationType[];
-}
 
 const ChatIdPage = async ({
   params
@@ -62,16 +59,11 @@ const ChatIdPage = async ({
     }
   });
 
-
-  //if (!companion) {
-  //  return redirect("/");
-  //}
-
-  if (companion) {
-    const observations: Observations[] = companion.observations;
-  } else {
+  const observations: Observations[] = companion ? companion.observations : [];
+  if (!companion) {
     return redirect("/");
-  }
+  }  
+
 
   return (
   <div className="flex max-w-screen min-h-screen max-h-screen antialiased">
