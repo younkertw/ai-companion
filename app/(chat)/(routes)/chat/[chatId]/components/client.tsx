@@ -19,6 +19,7 @@ import { CharacterType } from '@/lib/CharacterType'
 interface ChatClientProps {
   companion: Companion & {
     messages: Message[];
+    observations: Observations[];
     _count: {
       messages: number;
     }
