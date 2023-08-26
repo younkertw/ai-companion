@@ -59,7 +59,7 @@ const ObservationNew = ({ observations }: observationMessagesProps) => {
   }
 
   return (
-    <div className="relative w-full flex-col justify-center justify-items-center items-center bg-gray-50 bg-opacity-5 rounded-2xl backdrop-blur-xl drop-shadow-xl shadow shadow-indigo-500/70 px-2 pt-2 pb-3 mt-[9rem] overflow-y-auto">
+    <div className="relative w-full flex-col justify-center justify-items-center items-center bg-gray-50 bg-opacity-5 rounded-2xl backdrop-blur-xl drop-shadow-xl shadow shadow-indigo-500/70 px-2 pt-2 pb-3 mt-[9rem]">
       {currentObservation.length >= 0 && (
         <div className="flex flex-col items-start justify-start px-2 pt-2 pb-1 text-[16px] text-left text-white font-sans font-bold">
           My Observations

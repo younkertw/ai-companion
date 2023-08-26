@@ -78,7 +78,7 @@ export const ChatClient = ({
         </div>
         
         {/* Center Panel */}
-        <div className="flex flex-col h-full w-[55%] p-4 space-y-2">
+        <div className="flex flex-col h-auto w-[55%] p-4 space-y-2">
           <ChatHeader companion={companion} />
           <div className="flex-grow overflow-y-auto">
             <ChatMessages 
