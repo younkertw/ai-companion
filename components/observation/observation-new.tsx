@@ -6,10 +6,10 @@ import { HashLoader } from 'react-spinners'
 import type { ObservationType } from '@/lib/ObservationType'
 
 interface Props {
-  observationMessages: ObservationType[];
+  observations: ObservationType[];
 }
 
-const ObservationNew = ({ observationMessages }: Props) => {
+const ObservationNew = ({ observations }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isObservation, setIsObservation] = useState('')
   const [observations, setObservations] = useState<ObservationType[] >(observationMessages);
