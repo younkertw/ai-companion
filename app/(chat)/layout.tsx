@@ -5,7 +5,7 @@ const ChatLayout = ({
   children: React.ReactNode;
 }) => {
   return ( 
-    <div className="mx-auto max-w-3xl h-full w-full">
+    <div className="mx-auto max-w-7xl h-full w-full">
       {children}
     </div>
   );
