@@ -68,51 +68,39 @@ export const ChatClient = ({
 
   return (
       <div className="flex max-w-screen min-h-screen max-h-screen">
-      {/* Left Panel */}
-      <div className="hidden lg:block md:flex w-[25%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
-        <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
-          <ObservationNew observations={observations} /> 
+        {/* Left Panel */}
+        <div className="hidden lg:block md:flex w-[25%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
+          <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
+            <ObservationNew observations={observations} /> 
+          </div>
+          <div>
+          </div>
         </div>
-        <div>
-          {/* You can add any other content for the left panel here */}
-        </div>
-      </div>
-      
-      {/* Center Panel */}
-      <div className="flex flex-col h-full w-[50%] p-4 space-y-2">
-        {/* ChatHeader */}
-        <div className="flex-shrink-0">
+        
+        {/* Center Panel */}
+        <div className="flex flex-col h-full w-[50%] p-4 space-y-2">
           <ChatHeader companion={companion} />
-        </div>
-        
-        {/* ChatMessages */}
-        <div className="flex-grow overflow-y-auto">
-          <ChatMessages 
-            companion={companion}
-            isLoading={isLoading}
-            messages={messages}
-          />
-        </div>
-        
-        {/* ChatForm */}
-        <div className="flex-shrink-0">
+          <div className="flex-grow overflow-y-auto">
+            <ChatMessages 
+              companion={companion}
+              isLoading={isLoading}
+              messages={messages}
+            />
+          </div>
           <ChatForm 
             isLoading={isLoading} 
             input={input} 
             handleInputChange={handleInputChange} 
             onSubmit={onSubmit} 
           />
+          {isLoading && <Character character={character} />}
         </div>
-        
-        {isLoading && <Character character={character} />}
-      </div>
 
-      {/* Right Panel */}
-      <div className="hidden lg:block w-[25%] flex-grow pt-[2.75rem] px-1 overflow-y-auto division">
-        <div className="flex flex-col justify-center">
-          {/* You can add any content for the right panel here */}
+        {/* Right Panel */}
+        <div className="hidden lg:block w-[25%] flex-grow pt-[2.75rem] px-1 overflow-y-auto division">
+          <div className="flex flex-col justify-center">
+          </div>
         </div>
       </div>
-    </div>   
    );
 }
