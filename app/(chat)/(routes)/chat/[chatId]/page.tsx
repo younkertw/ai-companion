@@ -3,10 +3,10 @@ import { auth, redirectToSignIn, useAuth } from "@clerk/nextjs";
 
 //import supabase from '@/lib/supabaseClient';
 import prismadb from "@/lib/prismadb";
+import { Observations } from "@prisma/client";
 
 import { ChatClient } from "./components/client";
 import ObservationNew from '@/components/observation/observation-new';
-import type { ObservationType } from '@/lib/ObservationType'
 
 interface ChatIdPageProps {
   params: {
@@ -14,8 +14,8 @@ interface ChatIdPageProps {
   }
 }
 
-interface observationMessagesProps {
-  observations: ObservationType[];
+interface observationsProps {
+  observations: Observations[];
 }
 
 const ChatIdPage = async ({

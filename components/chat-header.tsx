@@ -3,7 +3,7 @@
 import axios from "axios";
 import { ChevronLeft, Edit, MessagesSquare, MoreVertical, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Companion, Message } from "@prisma/client";
+import { Companion, Message, Observations } from "@prisma/client";
 import { useUser } from "@clerk/nextjs";
 
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,7 @@ import { useToast } from "@/components/ui/use-toast";
 interface ChatHeaderProps {
   companion: Companion & {
     messages: Message[];
+    observations: Observations[];
     _count: {
       messages: number;
     };
