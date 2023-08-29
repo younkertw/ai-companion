@@ -1,7 +1,7 @@
 import { LLMChain } from 'langchain/chains';
 import { PromptTemplate } from "langchain/prompts";
 import { BaseChain } from "langchain/chains";
-import { BaseLanguageModel } from "langchain/llms/base_language_model";
+import { BaseLanguageModel } from "langchain/chat_models/base";
 import { ChainValues } from "langchain/schema";
 import { CallbackManagerForChainRun, Callbacks } from "langchain/callbacks";
 import { Document } from "langchain/documents";
