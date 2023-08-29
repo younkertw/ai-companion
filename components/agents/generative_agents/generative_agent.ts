@@ -1,6 +1,6 @@
 import { LLMChain } from 'langchain/chains';
 import { PromptTemplate } from "langchain/prompts";
-import { BaseLanguageModel } from "langchain/chat_models/base";
+import { BaseLanguageModel } from "langchain/base_language";
 import { ChainValues } from "langchain/schema";
 import { BaseChain } from "langchain/chains";
 import { GenerativeAgentMemory } from "./generative_agent_memory";
