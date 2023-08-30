@@ -71,14 +71,14 @@ export const ChatClient = ({
         {/* Left Panel */}
         <div className="hidden lg:block md:flex w-[45%] flex-grow items-start pt-[2.75rem] px-1 overflow-y-auto division">
           <div className="h-[60%] flex flex-col justify-center overflow-y-auto">
-            <ObservationNew observations={observations} /> 
+            {/* <ObservationNew observations={observations} /> */}
           </div>
           <div>
           </div>
         </div>
         
         {/* Center Panel */}
-        <div className="flex flex-col h-auto w-auto p-4 space-y-2">
+        <div className="flex flex-col h-auto w-[100%] p-4 space-y-2">
           <ChatHeader companion={companion} />
           <div className="flex-grow overflow-y-auto">
             <ChatMessages 
