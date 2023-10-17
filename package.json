@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.23.0",
+    "@clerk/clerk-react": "^4.26.3",
     "@clerk/themes": "^1.7.5",
     "@hookform/resolvers": "^3.1.1",
     "@huggingface/inference": "^1.8.0",
